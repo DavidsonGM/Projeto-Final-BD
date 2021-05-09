@@ -1,6 +1,6 @@
 #include <iostream>
-#include "mysql_connect/jdbc/mysql_connection.h"
-#include "mysql_connect/jdbc/cppconn/driver.h"
+#include "mysql-cppconn-8/jdbc/mysql_connection.h"
+#include "mysql-cppconn-8/jdbc/cppconn/driver.h"
 #include "db_info.cpp"
 //#include <mysql/mysql.h>
 

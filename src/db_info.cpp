@@ -8,5 +8,6 @@ class db_info{
             username = "root";
             password = "root";
         }
+        //
 };
 
