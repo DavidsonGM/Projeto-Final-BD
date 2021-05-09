@@ -124,7 +124,7 @@ CREATE TABLE Poções_Personagem (
   FOREIGN KEY (Poção_FK) REFERENCES Poção (Nome),
   FOREIGN KEY (Personagem_FK) REFERENCES Personagem (Nome));
 
--- ============================= Inserção de Registros no Banco =============================
+-- ============================= Inserção de Registros no Banco de Dados =============================
 
 INSERT INTO Arma values ("Gume do Infinito", "Espada", 100, 150, "Lendária");
 INSERT INTO Arma values ("Abraço de Seraph", "Cajado", 200, 110, "Rara");
