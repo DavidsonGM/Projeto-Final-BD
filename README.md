@@ -2,8 +2,8 @@
 
 Instalar libmysqlclient-dev, libmysqlcppconn-dev, libmysqlcppconn9
 
-Setar o Banco: mysql -p < db_scripts/Registros_BD.sql
+Setar o Banco: mysql -p < db_scripts/Script_SQL.sql
 
-Alterar as infos no db_info.cpp
+Alterar as infos no credentials.py e remover extensão .example
 
-Compilar o programa: g++ main.cpp db_info.cpp -lmysqlcppconn
+Compilar o programa: g++ main.cpp -lmysqlcppconn
