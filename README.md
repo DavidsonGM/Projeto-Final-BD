@@ -10,7 +10,11 @@
 
 ## 🧐 About <a name = "about"></a>
 
-This project was created for the Database class in order to apply all the knowledge acquired.
+This project was created for the Database class in order to apply all the knowledge acquired. 
+
+In [doc](./doc) are all the theoretical content
+
+In [src](./src) are the codes implementing an persitence layer and a CRUD for three related tables
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
