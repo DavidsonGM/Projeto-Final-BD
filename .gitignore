@@ -1,2 +1,2 @@
-/src/a.out
-/src/db_info.cpp
+src/credentials.py
+src/__pycache__/
