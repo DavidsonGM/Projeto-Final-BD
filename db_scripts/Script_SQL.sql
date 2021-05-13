@@ -17,7 +17,7 @@ CREATE TABLE Armadura (
   Raridade VARCHAR(45) NOT NULL);
 
 CREATE TABLE Atributo (
-  IdAtributo INT PRIMARY KEY,
+  IdAtributo INT PRIMARY KEY AUTO_INCREMENT,
   Pontos_Vida INT NOT NULL,
   Pontos_Mana INT NOT NULL,
   Nível INT NOT NULL,
@@ -139,11 +139,11 @@ INSERT INTO Armadura values ("Armadura de Espinhos", 150, 150, "Rara");
 INSERT INTO Armadura values ("Colete espinhoso", 75, 75, "Comum");
 INSERT INTO Armadura values ("Anjo Guardião", 200, 240, "Lendário");
 
-INSERT INTO Atributo values(0, 100, 50, 0, 10, 40);
-INSERT INTO Atributo values(1, 80, 100, 2, 70, 20);
-INSERT INTO Atributo values(2, 300, 50, 10, 100, 70);
-INSERT INTO Atributo values(3, 200, 70, 7, 84, 60);
-INSERT INTO Atributo values(4, 500, 75, 15, 120, 90);
+INSERT INTO Atributo (Pontos_Vida, Pontos_Mana, Nível, Defesa, Dano) values(100, 50, 0, 10, 40);
+INSERT INTO Atributo (Pontos_Vida, Pontos_Mana, Nível, Defesa, Dano) values(80, 100, 2, 70, 20);
+INSERT INTO Atributo (Pontos_Vida, Pontos_Mana, Nível, Defesa, Dano) values(300, 50, 10, 100, 70);
+INSERT INTO Atributo (Pontos_Vida, Pontos_Mana, Nível, Defesa, Dano) values(200, 70, 7, 84, 60);
+INSERT INTO Atributo (Pontos_Vida, Pontos_Mana, Nível, Defesa, Dano) values(500, 75, 15, 120, 90);
 
 INSERT INTO Classe values("Guerreiro", "Orc");
 INSERT INTO Classe values("Mago", "Elfo");
@@ -176,7 +176,7 @@ INSERT INTO Habilidades_Classe values("Ladino", "Lockpick");
 INSERT INTO Habilidades_Classe values("Atirador", "Zap");
 INSERT INTO Habilidades_Classe values("Mago", "Orbe da Ilusão");
 
-INSERT INTO Monstro values("Humano", "Normal", 0);
+INSERT INTO Monstro values("Humano", "Normal", 1);
 INSERT INTO Monstro values("Elfo", "Épico", 1);
 INSERT INTO Monstro values("Orc", "Boss", 2);
 INSERT INTO Monstro values("Dragão Ancião", "Boss", 4);
@@ -206,11 +206,11 @@ INSERT INTO Missões_Dungeon values("Mate o minion", "Void");
 INSERT INTO Missões_Dungeon values("Colete ingredientes", "The Deep Labyrinth");
 INSERT INTO Missões_Dungeon values("Colete ingredientes", "Shurima");
 
-INSERT INTO Personagem values("Dovahkiin", 20, NULL, NULL, 0, "Guerreiro");
-INSERT INTO Personagem values("Ryze", 100, "Abraço de Seraph", NULL, 0, "Mago");
+INSERT INTO Personagem values("Dovahkiin", 20, NULL, NULL, 1, "Guerreiro");
+INSERT INTO Personagem values("Ryze", 100, "Abraço de Seraph", NULL, 1, "Mago");
 INSERT INTO Personagem values("Katarina", 25, "Furacão de Runaan", "Armadura de Warmog", 2,"Ladino");
 INSERT INTO Personagem values("Geraldo da Riviera", 90, "Gume do Infinito", "Armadura de Espinhos", 3, "Witcher");
-INSERT INTO Personagem values("Jinx", 17, "Furacão de Runaan", "Anjo Guardião", 1, "Atirador");
+INSERT INTO Personagem values("Jinx", 17, "Furacão de Runaan", "Anjo Guardião", 4, "Atirador");
 
 INSERT INTO Missões_Personagem values("Dovahkiin", "Mate o boss");
 INSERT INTO Missões_Personagem values("Dovahkiin", "Roube a loja");

@@ -12,11 +12,11 @@ INSERT INTO Armadura values ("Armadura de Espinhos", 150, 150, "Rara");
 INSERT INTO Armadura values ("Colete espinhoso", 75, 75, "Comum");
 INSERT INTO Armadura values ("Anjo Guardião", 200, 240, "Lendário");
 
-INSERT INTO Atributo values(0, 100, 50, 0, 10, 40);
-INSERT INTO Atributo values(1, 80, 100, 2, 70, 20);
-INSERT INTO Atributo values(2, 300, 50, 10, 100, 70);
-INSERT INTO Atributo values(3, 200, 70, 7, 84, 60);
-INSERT INTO Atributo values(4, 500, 75, 15, 120, 90);
+INSERT INTO Atributo values(100, 50, 0, 10, 40);
+INSERT INTO Atributo values(80, 100, 2, 70, 20);
+INSERT INTO Atributo values(300, 50, 10, 100, 70);
+INSERT INTO Atributo values(200, 70, 7, 84, 60);
+INSERT INTO Atributo values(500, 75, 15, 120, 90);
 
 INSERT INTO Classe values("Guerreiro", "Orc");
 INSERT INTO Classe values("Mago", "Elfo");
