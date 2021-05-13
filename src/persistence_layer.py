@@ -33,15 +33,18 @@ class Table:
         try:
             self.cursor.reset()
             sql_query = f"insert into {self.table_name} values ("
-            for value in params:
-                if value:
-                    sql_query += f"'{value}',"
+            for i in range(len(params)):
+                if self.table_name == "Personagem" and i == len(params) - 1:
+                    sql_query += f'{params[i]},'
                 else:
-                    sql_query += f"NULL,"
+                    if params[i]:
+                        sql_query += f'"{params[i]}",'
+                    else:
+                        sql_query += f"NULL,"
             sql_query = sql_query[:-1] + ")"
             self.cursor.execute(sql_query)
             self.connection.commit()
-
+            
         except Error as error:
             print(f"Error while inserting values into table {self.table_name}", error)
 

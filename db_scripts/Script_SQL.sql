@@ -93,6 +93,7 @@ CREATE TABLE Personagem (
   Armadura_FK VARCHAR(45) NULL,
   Atributo_FK INT NOT NULL,
   Classe_FK VARCHAR(45) NOT NULL,
+  Foto LONGBLOB NULL,
   FOREIGN KEY (Arma_FK) REFERENCES Arma (Nome),
   FOREIGN KEY (Armadura_FK) REFERENCES Armadura (Nome),
   FOREIGN KEY (Atributo_FK) REFERENCES Atributo (IdAtributo),
@@ -206,11 +207,11 @@ INSERT INTO Missões_Dungeon values("Mate o minion", "Void");
 INSERT INTO Missões_Dungeon values("Colete ingredientes", "The Deep Labyrinth");
 INSERT INTO Missões_Dungeon values("Colete ingredientes", "Shurima");
 
-INSERT INTO Personagem values("Dovahkiin", 20, NULL, NULL, 1, "Guerreiro");
-INSERT INTO Personagem values("Ryze", 100, "Abraço de Seraph", NULL, 1, "Mago");
-INSERT INTO Personagem values("Katarina", 25, "Furacão de Runaan", "Armadura de Warmog", 2,"Ladino");
-INSERT INTO Personagem values("Geraldo da Riviera", 90, "Gume do Infinito", "Armadura de Espinhos", 3, "Witcher");
-INSERT INTO Personagem values("Jinx", 17, "Furacão de Runaan", "Anjo Guardião", 4, "Atirador");
+INSERT INTO Personagem values("Dovahkiin", 20, NULL, NULL, 1, "Guerreiro", NULL);
+INSERT INTO Personagem values("Ryze", 100, "Abraço de Seraph", NULL, 1, "Mago", NULL);
+INSERT INTO Personagem values("Katarina", 25, "Furacão de Runaan", "Armadura de Warmog", 2,"Ladino", NULL);
+INSERT INTO Personagem values("Geraldo da Riviera", 90, "Gume do Infinito", "Armadura de Espinhos", 3, "Witcher", NULL);
+INSERT INTO Personagem values("Jinx", 17, "Furacão de Runaan", "Anjo Guardião", 4, "Atirador", NULL);
 
 INSERT INTO Missões_Personagem values("Dovahkiin", "Mate o boss");
 INSERT INTO Missões_Personagem values("Dovahkiin", "Roube a loja");

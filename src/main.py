@@ -1,5 +1,13 @@
 from persistence_layer import Table
 import os
+import binascii
+import re
+
+def ReadPhoto(filename):
+    with open(f'./profile_pictures/{filename}.png', 'rb') as file:
+        binary = file.read()
+        binary = binascii.hexlify(binary)
+        return re.sub('b', 'x', str(binary), 1)
 
 def BaseScreen(text, options = []):
     os.system("clear")
@@ -62,10 +70,14 @@ def CrudScreen(table_name_singular, table_name_plural, params):
 
         for i in range(len(params)):
             tmp = input(f"Digite {params[i].lower()}: ")
+
+            if params[i].lower() == "foto":
+                tmp = ReadPhoto(tmp)
             if tmp == '\n':
                 input_params.append(None)
             else:
                 input_params.append(tmp)
+
 
         table = Table(table_name_singular.capitalize())
         result = table.Create(input_params)
@@ -133,7 +145,7 @@ def ClasseScreen():
 
 def PersonagemScreen():
     BaseScreen("PERSONAGEM", ("Mostar Personagens", "Criar Personagem", "Atualizar Personagem", "Deletar Personagem", "Retornar"))
-    CrudScreen("personagem", "personagens", ("nome", "idade", "arma", "armadura", "atributo", "classe"))
+    CrudScreen("personagem", "personagens", ("nome", "idade", "arma", "armadura", "atributo", "classe", "foto"))
 
 def AtributoScreen():
     BaseScreen("ATRIBUTO", ("Mostar Atributos", "Criar Atributo", "Atualizar Atributo", "Deletar Atributo", "Retornar"))
@@ -160,5 +172,8 @@ def InitialScreen():
         return
     if digit == 6:
         return
+
+    
+        
 
 InitialScreen()
