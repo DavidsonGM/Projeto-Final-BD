@@ -75,7 +75,7 @@ CREATE TABLE Missão (
   Experiencia INT NOT NULL,
   Local VARCHAR(45) NOT NULL,
   Descrição TEXT(100) NULL,
-  Recompensa VARCHAR(45) NOT NULL,
+  Recompensa VARCHAR(45),
   NPC_FK VARCHAR(45) NOT NULL,
   FOREIGN KEY (NPC_FK) REFERENCES NPC (Nome));
 
@@ -194,11 +194,11 @@ INSERT INTO NPC values("Balgruuf", "Jarl", "Whiterun", NULL);
 INSERT INTO NPC values("Triss Merigold", "Feitiçeira", "Vizima", "Triss foi uma feitiçeira lendária do século XIII");
 INSERT INTO NPC values("Dandelion", "Bardo", "Vizima", "Dandelion é um amigo próximo de Geraldo da Riviera");
 
-INSERT INTO Missão values("Mate o boss", 100, "Shurima", "Mate o monstro em shurima", 200, "Faendal");
-INSERT INTO Missão values("Roube a loja", 50, "Bandle City", "Roube a loja de Bandle City", 500, "Sven");
-INSERT INTO Missão values("Mate o minion", 150, "Vazio", "Mate um minion do vazio", 0, "Sven");
-INSERT INTO Missão values("Colete ingredientes", 80, "Vizima", "Colete os ingredientes para que Triss prepara sua poção", 120, "Sven");
-INSERT INTO Missão values("Compor música", 100, "Vizima", "Ajude Dandelion a compor uma letra para sua canção", 0, "Dandelion");
+INSERT INTO Missão values("Mate o boss", 100, "Shurima", "Mate o monstro em shurima", "15 moedas de ouro", "Faendal");
+INSERT INTO Missão values("Roube a loja", 50, "Bandle City", "Roube a loja de Bandle City", "200 moedas de qualquer material", "Sven");
+INSERT INTO Missão values("Mate o minion", 150, "Vazio", "Mate um minion do vazio", NULL , "Sven");
+INSERT INTO Missão values("Colete ingredientes", 80, "Vizima", "Colete os ingredientes para que Triss prepara sua poção", "Bilhete Misterioso", "Triss Merigold");
+INSERT INTO Missão values("Compor música", 100, "Vizima", "Ajude Dandelion a compor uma letra para sua canção", "Vinho Típico de Vizima", "Dandelion");
 
 INSERT INTO Missões_Dungeon values("Mate o boss", "Shurima");
 INSERT INTO Missões_Dungeon values("Roube a loja", "Bandle City");
