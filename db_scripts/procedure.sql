@@ -79,5 +79,5 @@ create view Personagens_Sven as select
     LEFT JOIN Dungeon on Dungeon_FK = Dungeon.Nome
     WHERE NPC_FK = "Sven";
     
-select * from Missões_Sven;
+select * from Personagens_Sven;
 	
