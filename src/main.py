@@ -3,6 +3,7 @@ import os
 import binascii
 import re
 
+#Transform an image into a hexadecimal string
 def ReadPhoto(filename):
     with open(f'./profile_pictures/{filename}.png', 'rb') as file:
         binary = file.read()
@@ -174,6 +175,4 @@ def InitialScreen():
         return
 
     
-        
-
 InitialScreen()

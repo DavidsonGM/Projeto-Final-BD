@@ -28,24 +28,31 @@ Python 3.8.5 with Pip Installed
 
 ### Installing
 
-After clone the repository, install MySQL connector Python
+After clone the repository, install MySQL connector Python:
 ```
 pip install mysql-connector-python
 ```
-Set up the database
+Set up the database (This file includes all other sql files that create the DB):
 ```
-mysql -p < db_scripts/Script_SQL.sql
+mysql -p < db_scripts/All_Scripts.sql
 ```
 Change database acess credentials in file [credentials.py.example](./src/credentials.py.example) and rename it to credentials.py
 
 
 ## 🎈 Usage <a name="usage"></a>
 
-Run the program with the command below
+Run the crud program with the following command:
 ```
  python3 ./src/main.py
 ```
-
+Run the view with following command:
+```
+ select * from Personagens_Sven;
+```
+Run the procedure with following command, being that rounds is the number of rounds of the battle, Personagem is the name of Personagem (Primary Key), and Monstro the name of Monstro (Primary Key):
+```
+ call Batalha(rounds, Personagem, Monstro);
+```
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
